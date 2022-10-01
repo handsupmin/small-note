@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>나만의 암기 노트</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="question-area">
+            <label id="title"></label><br />
+            <label>내용1 </label><label id="result1" class="result"></label><br />
+            <label id="targetText1" class="content" data-answer="" data-is-qna="false"></label><br />
+            <textarea type="text" id="inputText1" spellcheck="false"></textarea><br />
+            <button onclick="validateText(1)">확인</button><br />
+            <label>내용2 </label><label id="result2" class="result"></label><br />
+            <label id="targetText2" class="content" data-answer="" data-is-qna="false"></label><br />
+            <textarea type="text" id="inputText2" spellcheck="false"></textarea><br />
+            <button onclick="validateText(2)">확인</button><br />
+            <label>내용3 </label><label id="result3" class="result"></label><br />
+            <label id="targetText3" class="content" data-answer="" data-is-qna="false"></label><br />
+            <textarea type="text" id="inputText3" spellcheck="false"></textarea><br />
+            <button onclick="validateText(3)">확인</button><br />
+            <label>내용4 </label><label id="result4" class="result"></label><br />
+            <label id="targetText4" class="content" data-answer="" data-is-qna="false"></label><br />
+            <textarea type="text" id="inputText4" spellcheck="false"></textarea><br />
+            <button onclick="validateText(4)">확인</button><br />
+        </div>
+        <br />
+        <div>
+            <button onclick="setQuestion()">다음 문제</button>
+        </div>
+    </div>
+    <script src="question.json" type="text/javascript"></script>
+    <script src="main.js"></script>
+</body>
+</html>
