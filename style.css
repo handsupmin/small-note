@@ -11,10 +11,17 @@ button {
   margin-bottom: 5px;
 }
 
-label {
+span {
   font-size: 15px;
   text-align: center;
 }
+  .title {
+    margin-right: 5px;
+  }
+  .sub-title{
+    font-size: 17px;
+    font-weight: bold;
+  }
   .content {
     font-size: 15px;
     text-align: left;
@@ -24,15 +31,29 @@ html {
   background-color: #FFE3EE;
 }
 
+input {
+  width: 700px;
+}
+
+  input[type=number] {
+    width: 30px;
+  }
+    input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
 textarea {
   width: 700px;
-  height: fit-content;
+  min-height: 5rem;
+  overflow-y: hidden;
   font-size:15px;
   resize: none;
   border: none;
   word-wrap: break-word;
   word-break: break-all;
-
+  margin-top: 10px;
 }
 
 textarea:focus, input:focus{
