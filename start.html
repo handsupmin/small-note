@@ -10,30 +10,27 @@
 <body>
     <div class="flex-container">
         <div class="question-area">
-            <label id="title"></label><br />
-            <label>내용1 </label><label id="result1" class="result"></label><br />
-            <label id="targetText1" class="content" data-answer="" data-is-qna="false"></label><br />
-            <textarea type="text" id="inputText1" spellcheck="false"></textarea><br />
-            <button onclick="validateText(1)">확인</button><br />
-            <label>내용2 </label><label id="result2" class="result"></label><br />
-            <label id="targetText2" class="content" data-answer="" data-is-qna="false"></label><br />
-            <textarea type="text" id="inputText2" spellcheck="false"></textarea><br />
-            <button onclick="validateText(2)">확인</button><br />
-            <label>내용3 </label><label id="result3" class="result"></label><br />
-            <label id="targetText3" class="content" data-answer="" data-is-qna="false"></label><br />
-            <textarea type="text" id="inputText3" spellcheck="false"></textarea><br />
-            <button onclick="validateText(3)">확인</button><br />
-            <label>내용4 </label><label id="result4" class="result"></label><br />
-            <label id="targetText4" class="content" data-answer="" data-is-qna="false"></label><br />
-            <textarea type="text" id="inputText4" spellcheck="false"></textarea><br />
-            <button onclick="validateText(4)">확인</button><br />
+            <span id="title" class="title"></span>
+            <button onclick="setQuestion(-1)">이전</button>
+            <button onclick="setQuestion(1)">다음</button>
+            <br />
+            <span id="sub-title" class="sub-title"></span>
+            <br />
+            <span> </span>
+            <span id="result" class="result"></span><br />
+            <span id="target-text" class="content" data-answer="" data-is-qna="false"></span>
+            <textarea type="text" id="input-text" spellcheck="false" onkeydown="resize(this)" onkeyup="resize(this)"></textarea><br />
+            <button onclick="validateText()">확인</button><br />
+        </div>
+        <div>
+            <span id="current-idx"></span>
+            <span id="max-idx"></span>
+            <input type="number" id="move-page" onkeypress="validateNum(), quickSearch()"></input>
+            <button onclick="moveQuestion()">이동</button>
         </div>
         <br />
-        <div>
-            <button onclick="setQuestion()">다음 문제</button>
-        </div>
     </div>
-    <script src="question.json" type="text/javascript"></script>
-    <script src="main.js"></script>
+    <script src="question-data.json" type="text/javascript"></script>
+    <script src="start.js"></script>
 </body>
 </html>

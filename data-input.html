@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>데이터 입력</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="flex-container">
+        <div class="question-area">
+            <span><b>데이터 입력</b></span><br />
+            <span>제목</span><br />
+            <textarea type="text" id="title" spellcheck="false"></textarea><br />
+            <span>소제목 </span><br />
+            <textarea type="text" id="sub-title" spellcheck="false"></textarea><br />
+            <span>본문</span><br />
+            <textarea type="text" id="target-text" spellcheck="false"></textarea><br />
+            <button onclick="inputData()">데이터 추가</button><br />
+            <button onclick="saveJson()">저장</button><br />
+        </div>
+    </div>
+    <script src="question-data.json" type="text/javascript"></script>
+    <script src="data-input.js"></script>
+</body>
+</html>
